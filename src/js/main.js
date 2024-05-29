@@ -1,20 +1,21 @@
-// ===================== MENU TOOGLE =====================
-// const menu = document.getElementById("menu");
-// const mobileToggle = document.getElementById("mobile-toggle");
-
-// mobileToggle.onclick = () => {
-//    menu.classList.toggle("mobile");
-// };
 // ===================== MOBILE TOGGLE MENU =====================
-// const toggleMobile = document.getElementById("toggle-mobile");
-// const asideBar = document.getElementById("aside");
-// const navLink = document.getElementById("links");
-// const toggleMenu = () => {
-//    asideBar.classList.toggle("show");
-//    toggleMobile.classList.toggle("close");
-// };
-// toggleMobile.addEventListener("click", toggleMenu); // Make it in mobile
-// links.addEventListener("click", toggleMenu); // Remove when click any navLink
+const menu = document.getElementById("menu");
+const toggleMobile = document.getElementById("toggle-mobile");
+
+const toggleMenu = () => {
+   menu.classList.toggle("show");
+};
+toggleMobile.addEventListener("click", toggleMenu); // Make it in mobile
+menu.addEventListener("click", toggleMenu); // Remove when click any navLink
+
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+function scrollHeader() {
+   const nav = document.getElementById("header");
+   // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
+   if (this.scrollY >= 120) nav.classList.add("scroll-header");
+   else nav.classList.remove("scroll-header");
+}
+window.addEventListener("scroll", scrollHeader);
 
 // ===================== THE YEAR =====================
 const theYear = document.getElementById("year");

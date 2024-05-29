@@ -10,6 +10,9 @@
       <!-- ==================== Normalize ==================== -->
       <link rel="stylesheet" href="src/css/normalize.css" />
 
+      <!-- ==================== Wow.js ==================== -->
+      <link rel="stylesheet" href="src/css/animate.css" />
+
       <!-- ==================== Google Fonts ==================== -->
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,20 +35,16 @@
    </head>
    <body>
       <!-- ==================== Header ==================== -->
-      <header class="header">
+      <header id="header" class="header">
          <nav class="nav container flex-between">
             <a href="" class="logo">Logo</a>
-            <div class="menu flex-between">
+            <div id="menu" class="menu flex-between">
                <ul class="links flex-between">
                   <li><a class="link" href="">الرئيسية</a></li>
                   <li><a class="link" href="#services">خدماتنا</a></li>
                   <li><a class="link" href="#contact-us">تواصل معنا</a></li>
                </ul>
-               <!-- <div class="toggle-mobile" id="toggle-mobile">
-                  <span class="toggle-mobile__span"></span
-                  ><span class="toggle-mobile__span"></span
-                  ><span class="toggle-mobile__span"></span>
-               </div> -->
+
                <div class="social flex-between">
                   <a
                      href="https://www.facebook.com/"
@@ -105,6 +104,11 @@
                   </a>
                </div>
             </div>
+            <div id="toggle-mobile" class="toggle-mobile">
+               <span class="toggle-mobile__span"></span
+               ><span class="toggle-mobile__span"></span
+               ><span class="toggle-mobile__span"></span>
+            </div>
          </nav>
       </header>
 
@@ -125,8 +129,65 @@
          </div>
       </section>
 
+      <!-- ==================== Services ==================== -->
+      <section id="services" class="services">
+         <div class="title-container wow bounceInUp">
+            <span class="l-title"></span>
+            <h2 class="section-title">خدماتنا</h2>
+            <span class="r-title"></span>
+         </div>
+         <div class="container flex-between">
+            <div class="image wow slideInRight">
+               <img src="src/assets/imgs/service_01.jpg" alt="" />
+            </div>
+            <div class="content wow slideInLeft">
+               <!-- <h3>تذاكر الطيران</h3> -->
+               <div class="box flex-between">
+                  <i class="ri-arrow-left-circle-line"></i>
+                  <p>
+                     <span class="special"
+                        >حجز وإصدار تذاكر الطيران الدولية والمحلية</span
+                     >
+                     تشمل خدمات حجز تذاكر الطيران توفير خيارات متعددة للرحلات
+                     الجوية، بما في ذلك شركات الطيران المختلفة والدرجات المتاحة
+                     (اقتصادية، رجال الأعمال، الدرجة الأولى). تتضمن الخدمة أيضًا
+                     إصدار التذاكر الإلكترونية وتقديم المعلومات حول متطلبات
+                     السفر، مثل جوازات السفر والتأشيرات.
+                  </p>
+               </div>
+               <div class="box flex-between">
+                  <i class="ri-arrow-left-circle-line"></i>
+                  <p>
+                     <span class="special"
+                        >توفير خيارات متعددة للإقامة من فنادق فاخرة إلى نزل
+                        اقتصادية</span
+                     >
+                     تشمل هذه الخدمة البحث عن الفنادق الأنسب لاحتياجات وميزانيات
+                     العملاء. يتم توفير تفاصيل حول الفنادق، بما في ذلك الصور
+                     والتقييمات وموقعها على الخريطة. يمكن للعملاء اختيار الإقامة
+                     في فنادق فاخرة، فنادق متوسطة، أو نزل اقتصادية بناءً على
+                     تفضيلاتهم.
+                  </p>
+               </div>
+               <div class="box flex-between">
+                  <i class="ri-arrow-left-circle-line"></i>
+                  <p>
+                     <span class="special">
+                        خدمات تأجير السيارات في مختلف الوجهات</span
+                     >
+                     تشمل هذه الخدمة البحث عن الفنادق الأنسب لاحتياجات وميزانيات
+                     العملاء. يتم توفير تفاصيل حول الفنادق، بما في ذلك الصور
+                     والتقييمات وموقعها على الخريطة. يمكن للعملاء اختيار الإقامة
+                     في فنادق فاخرة، فنادق متوسطة، أو نزل اقتصادية بناءً على
+                     تفضيلاتهم.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
       <!-- ==================== Footer ==================== -->
-      <footer class="footer">
+      <footer id="contact-us" class="footer">
          <div class="overlay"></div>
          <div class="container">
             <div class="company-info">
@@ -136,8 +197,45 @@
                   أفضل تجربة سفر مع باقة رائعة تلبي كل الاهتمامات والميزانيات ..
                   اكتشف الوجهات وعش أجمل اللحظات معنا.
                </p>
-
-               <div class="social flex-center">
+            </div>
+            <ul class="links">
+               <li>
+                  <a class="link" href=""
+                     ><i class="ri-arrow-left-double-line"></i>الرئيسية</a
+                  >
+               </li>
+               <li>
+                  <a class="link" href="#services"
+                     ><i class="ri-arrow-left-double-line"></i>خدماتنا</a
+                  >
+               </li>
+               <li>
+                  <a class="link" href="#contact-us"
+                     ><i class="ri-arrow-left-double-line"></i>تواصل معنا</a
+                  >
+               </li>
+            </ul>
+            <div class="contact">
+               <div class="box">
+                  <i class="ri-map-pin-fill"></i>
+                  <h3>سوريا, اللاذقية, شارع الجمهورية</h3>
+               </div>
+               <div class="box">
+                  <i class="ri-time-fill"></i>
+                  <h3>ساعات العمل 9ص - 5م</h3>
+               </div>
+               <div class="box">
+                  <i class="ri-phone-fill"></i>
+                  <h3>
+                     0999999999 <br />
+                     0988888888
+                  </h3>
+               </div>
+               <div class="box">
+                  <i class="ri-mail-fill"></i>
+                  <h3>email@email.com</h3>
+               </div>
+               <div class="social flex">
                   <a
                      href="https://www.facebook.com/"
                      target="_blank"
@@ -196,48 +294,14 @@
                   </a>
                </div>
             </div>
-            <ul class="links">
-               <li>
-                  <a class="link" href=""
-                     ><i class="ri-arrow-left-double-line"></i>الرئيسية</a
-                  >
-               </li>
-               <li>
-                  <a class="link" href="#services"
-                     ><i class="ri-arrow-left-double-line"></i>خدماتنا</a
-                  >
-               </li>
-               <li>
-                  <a class="link" href="#contact-us"
-                     ><i class="ri-arrow-left-double-line"></i>تواصل معنا</a
-                  >
-               </li>
-            </ul>
-            <div class="location">
-               <div class="box">
-                  <i class="ri-map-pin-fill"></i>
-                  <h3>سوريا اللاذقية شارع الجمهورية</h3>
-               </div>
-               <div class="box">
-                  <i class="ri-time-fill"></i>
-                  <h3>ساعات العمل ما 9 إلى 10</h3>
-               </div>
-               <div class="box">
-                  <i class="ri-phone-fill"></i>
-                  <h3>
-                     0999999999 <br />
-                     0988888888
-                  </h3>
-               </div>
-            </div>
          </div>
+         <p class="footer-text">
+            جميع الحقوق محفوظة شركة
+            <a href="/" class="company-name">GO4SEASON</a>
+            &copy;
+            <span id="year"></span>
+         </p>
       </footer>
-      <p class="footer-text">
-         جميع الحقوق محفوظة شركة
-         <a href="/" class="company-name">GO4SEASON</a>
-         &copy;
-         <span id="year"></span>
-      </p>
       <!-- ==================== Scroll To Top ==================== -->
       <a href="#" class="scroll-up">
          <svg
@@ -256,5 +320,9 @@
 
       <!-- ==================== javascript ==================== -->
       <script src="src/js/main.js"></script>
+      <script src="src/js/wow.min.js"></script>
+      <script>
+         new WOW().init();
+      </script>
    </body>
 </html>
