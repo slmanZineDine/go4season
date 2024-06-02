@@ -335,9 +335,6 @@ textarea:focus {
    padding-top: var(--main-padding);
    padding-bottom: 2rem;
    background-color: #fafafa;
-   /* background-image: url("../assets/imgs/test.jpg");
-   background-repeat: no-repeat;
-   background-size: contain; */
 }
 .services .container {
    display: grid;
@@ -405,6 +402,7 @@ textarea:focus {
 }
 
 /* ==================== Offers ==================== */
+
 .offers {
    padding-block: 2rem;
 }
@@ -413,17 +411,19 @@ textarea:focus {
    gap: 2rem;
 }
 .offers .image {
+   align-self: center;
+}
+.offers .image-frame {
    position: relative;
    align-self: center;
-   /* max-width: 30%; */
    z-index: 1;
 }
-.offers .image img {
+.offers .image-frame img {
    height: 20rem;
    min-width: 15rem;
    max-width: auto;
 }
-.offers .image::before {
+.offers .image-frame::before {
    content: "";
    position: absolute;
    top: -1.5rem;
@@ -475,6 +475,83 @@ textarea:focus {
       height: 24rem;
    }
 }
+
+/* ==================== sports ==================== */
+.sports {
+   padding-block: 2rem;
+}
+.sports .container {
+   flex-direction: column;
+}
+.sports .content {
+   line-height: 1.5;
+   text-align: center;
+}
+.sports .content .title {
+   text-align: center;
+   font-weight: bold;
+   font-size: 1.5rem;
+   color: var(--primaryColor);
+   margin-bottom: 2rem;
+}
+.sports .content .special {
+   color: var(--secondaryColor);
+   font-weight: bold;
+}
+.sports .gallery {
+   display: grid;
+   grid-template-columns: repeat(4, minmax(200px, 1fr));
+   gap: 1.5rem;
+   margin-top: 1rem;
+}
+.sports .gallery .box {
+   padding: 0.5rem;
+   background-color: var(--primaryColor);
+}
+.sports .gallery .box .image {
+   position: relative;
+   overflow: hidden;
+}
+.sports .gallery .box .image::before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 0;
+   height: 0;
+   opacity: 0;
+   background-color: rgb(255 255 255 / 40%);
+   z-index: 1;
+}
+.sports .gallery .box .image:hover::before {
+   animation: flashing 0.5s linear;
+}
+.sports .gallery .box .image img {
+   max-width: 100%;
+   transition: 0.5s;
+}
+.sports .gallery .box .image:hover img {
+   transform: rotate(5deg) scale(1.2);
+}
+/* ==================== BREAKPOINTS ==================== */
+@media (max-width: 992px) {
+   .sports .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(350px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+   }
+}
+@media (max-width: 768px) {
+   .sports .gallery {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+   }
+}
+
 /* ==================== Footer ==================== */
 .footer {
    padding-top: 2rem;
@@ -499,11 +576,16 @@ textarea:focus {
 .footer .company-info .text {
    max-width: 16rem;
 }
-.footer .links li:not(:last-of-type) {
+.footer .links > h3 {
+   font-weight: bold;
+   color: #fff;
+   margin-bottom: 1rem;
+}
+.footer .links-container li:not(:last-of-type) {
    border-bottom: 1px solid #fff;
 }
 
-.footer .links li .link {
+.footer .links-container li .link {
    display: block;
    padding-block: 0.5rem;
    width: 11rem;
@@ -511,16 +593,20 @@ textarea:focus {
    font-size: 1.1rem;
    transition: transform 0.4s;
 }
-.footer .links li .link:hover {
+.footer .links-container li .link:hover {
    transform: translateX(-0.7rem);
 }
-.footer .links li .link i {
+.footer .links-container li .link i {
    font-size: 1.3rem;
    color: var(--secondaryColor);
    margin-inline-end: 1rem;
 }
 .footer .contact {
    color: #fff;
+}
+.footer .contact > h3 {
+   font-weight: bold;
+   margin-bottom: 1rem;
 }
 .footer .contact .box {
    display: flex;
