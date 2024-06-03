@@ -6,8 +6,8 @@
    --normal-font-size: 1.5rem;
 
    /* Colors */
-   --primaryColor: #f2ca69;
-   --secondaryColor: #226999;
+   --primaryColor: #f2ca55;
+   --secondaryColor: #002448;
    --paddingBetweenSection: 50px 0 50px;
 
    /* Spaces */
@@ -234,7 +234,8 @@ textarea:focus {
    transition: all 0.6s;
 }
 .header.scroll-header {
-   background-color: var(--secondaryColor);
+   /* background-color: var(--secondaryColor); */
+   background-image: linear-gradient(to left, #002448, #003e77);
    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 .nav .logo {
@@ -333,7 +334,7 @@ textarea:focus {
 /* ==================== Services ==================== */
 .services {
    padding-top: var(--main-padding);
-   padding-bottom: 2rem;
+   padding-bottom: 4rem;
    background-color: #fafafa;
 }
 .services .container {
@@ -402,26 +403,27 @@ textarea:focus {
 }
 
 /* ==================== Offers ==================== */
-
 .offers {
-   padding-block: 2rem;
+   padding-block: 4rem;
 }
 .offers .container {
    align-items: start;
    gap: 2rem;
 }
-.offers .image {
+/* .offers .image {
    align-self: center;
-}
+} */
 .offers .image-frame {
    position: relative;
    align-self: center;
+   /* width: 40%; */
    z-index: 1;
 }
 .offers .image-frame img {
-   height: 20rem;
-   min-width: 15rem;
-   max-width: auto;
+   height: 25rem;
+   min-width: 20rem;
+   /* max-width: auto; */
+   /* width: 100%; */
 }
 .offers .image-frame::before {
    content: "";
@@ -435,6 +437,8 @@ textarea:focus {
    z-index: -1;
 }
 .offers .content {
+   /* width: 55%; */
+   align-self: center;
    line-height: 1.5;
 }
 .offers .content .title {
@@ -461,24 +465,26 @@ textarea:focus {
 }
 
 /* ==================== BREAKPOINTS ==================== */
+
 @media (max-width: 768px) {
    .offers .container {
       flex-direction: column;
    }
-   .offers .image::before {
+   .offers .image-frame::before {
       display: none;
    }
-   .offers .image {
+   .offers .image-frame {
       max-width: 100%;
    }
-   .offers .image img {
+   .offers .image-frame img {
       height: 24rem;
    }
 }
 
 /* ==================== sports ==================== */
 .sports {
-   padding-block: 2rem;
+   padding-top: 2rem;
+   padding-bottom: 4rem;
 }
 .sports .container {
    flex-direction: column;
@@ -506,6 +512,7 @@ textarea:focus {
 }
 .sports .gallery .box {
    padding: 0.5rem;
+   margin-top: 2rem;
    background-color: var(--primaryColor);
 }
 .sports .gallery .box .image {
